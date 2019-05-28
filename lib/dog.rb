@@ -93,7 +93,7 @@ binding.pry
         name = row[1]
         breed = row[2]
       }
-      dog = Dog.new(hash)
+      dog = self.new(hash)
       dog
   end
 
