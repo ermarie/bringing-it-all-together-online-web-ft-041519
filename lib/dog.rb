@@ -108,6 +108,7 @@ def self.find_by_name(name)
 
     DB[:conn].execute(sql, name).map do |row|
       dog = self.new_from_db(row)
+      binding.pry
     end
   end
 
