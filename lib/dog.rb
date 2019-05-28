@@ -87,8 +87,7 @@ binding.pry
   end
 
 def self.find_by(name, breed)
-    # find the student in the database given a name
-    # return a new instance of the Student class
+
     sql = <<-SQL
       SELECT *
       FROM dogs
