@@ -69,7 +69,7 @@ class Dog
     found_dog
   end
 
-  def self.find_by(name:, breed:)
+  def self.find_or_create_by(name:, breed:)
 
     dog = self.find_by_name_and_breed(name, breed)
 
