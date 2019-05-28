@@ -94,7 +94,9 @@ describe "Dog" do
   describe '.find_or_create_by' do
     it 'creates an instance of a dog if it does not already exist' do
       dog1 = Dog.create(name: 'teddy', breed: 'cockapoo')
+      binding.pry
       dog2 = Dog.find_or_create_by(name: 'teddy', breed: 'cockapoo')
+      binding.pry
 
       expect(dog1.id).to eq(dog2.id)
     end
