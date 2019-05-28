@@ -49,6 +49,7 @@ class Dog
      dog.save
      binding.pry
      if !dog.id == nil
+       binding.pry
        dog.id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
      end
      dog
