@@ -75,7 +75,7 @@ class Dog
 
     dog = self.find_by_name(name)
 
-    if dog == nil
+    if dog.breed != breed
       hash = {
           :name => name,
           :breed => breed
