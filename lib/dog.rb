@@ -86,16 +86,16 @@ binding.pry
 
   end
 
-def self.find_by(name, breed)
+def self.find_by_name(name)
 
     sql = <<-SQL
       SELECT *
       FROM dogs
-      WHERE name = ?, breed = ?
+      WHERE name = ?
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql, name, breed).map do |row|
+    DB[:conn].execute(sql, name).map do |row|
       id = row[0]
       id
     end.first
