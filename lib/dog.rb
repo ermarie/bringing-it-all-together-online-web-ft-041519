@@ -106,10 +106,10 @@ def self.find_by_name(name)
       LIMIT 1
     SQL
 
-    dog_array = DB[:conn].execute(sql, name).map do |row|
+    DB[:conn].execute(sql, name).map do |row|
       dog = self.new_from_db(row)
     end
-    binding.pry
+
   end
 
   def update
