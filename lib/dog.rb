@@ -110,7 +110,7 @@ def self.find_by_name(name)
       self.new_from_db(row)
     end.first
 
-    self.find_by_id(self.id)
+    self.find_by_id(dog.id)
   end
 
   def update
