@@ -140,14 +140,10 @@ describe "Dog" do
 
   describe '#update' do
     it 'updates the record associated with a given instance' do
-      binding.pry
       teddy.save
-      binding.pry
       teddy.name = "Teddy Jr."
-      binding.pry
       teddy.update
       teddy_jr = Dog.find_by_name("Teddy Jr.")
-      binding.pry
       expect(teddy_jr.id).to eq(teddy.id)
     end
 
