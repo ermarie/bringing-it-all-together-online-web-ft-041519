@@ -142,6 +142,7 @@ describe "Dog" do
     it 'updates the record associated with a given instance' do
       binding.pry
       teddy.save
+      binding.pry
       teddy.name = "Teddy Jr."
       binding.pry
       teddy.update
