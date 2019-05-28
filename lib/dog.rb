@@ -93,7 +93,8 @@ binding.pry
         name = row[1]
         breed = row[2]
       }
-      Dog.new(hash)
+      dog = Dog.new(hash)
+      dog
   end
 
 def self.find_by_name(name)
