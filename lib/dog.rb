@@ -71,19 +71,18 @@ class Dog
 
   def self.find_or_create_by(name:, breed:)
 
-    self.find_by_name(name)
+    dog = self.find_by_name(name)
 
+    if dog == nil
     hash = {
         :name => name,
         :breed => breed
       }
     new_dog = self.create(hash)
     new_dog
-
-    dogs = self.find_by_name(name)
-
-new_dog
-
+  else
+    dog
+  end
 
   end
 
