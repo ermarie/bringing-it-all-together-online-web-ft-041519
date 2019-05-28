@@ -94,17 +94,17 @@ binding.pry
   dog  # return the newly created instance
 end
 
-def self.find_by_name(name)
+def self.find_by_name_and_breed(name, breed)
     # find the student in the database given a name
     # return a new instance of the Student class
     sql = <<-SQL
       SELECT *
       FROM dogs
-      WHERE name = ?
+      WHERE name = ?, brred = ?
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql, name).map do |row|
+    DB[:conn].execute(sql, name, breed).map do |row|
       self.new_from_db(row)
     end.first
   end
