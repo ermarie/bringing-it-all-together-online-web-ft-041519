@@ -47,6 +47,7 @@ class Dog
     self.create_table
      dog = Dog.new(hash)
      dog.save
+     binding.pry
      if !dog.id == nil
        dog.id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
      end
