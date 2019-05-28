@@ -108,6 +108,7 @@ describe "Dog" do
     end
     it 'when creating a new dog with the same name as persisted dogs, it returns the correct dog' do
       dog1 = Dog.create(name: 'teddy', breed: 'cockapoo')
+      binding.pry
       dog2 = Dog.create(name: 'teddy', breed: 'pug')
 binding.pry
       new_dog = Dog.find_or_create_by({name: 'teddy', breed: 'irish setter'})
