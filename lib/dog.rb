@@ -69,7 +69,7 @@ class Dog
     found_dog
   end
 
-  def self.find_or_create_by(name:, breed:)
+  def self.find_by(name:, breed:)
 
     dog = self.find_by_name_and_breed(name, breed)
 
@@ -86,7 +86,7 @@ class Dog
 
   end
 
-def self.find_by_name_and_breed(name, breed)
+def self.find_by(name, breed)
     # find the student in the database given a name
     # return a new instance of the Student class
     sql = <<-SQL
