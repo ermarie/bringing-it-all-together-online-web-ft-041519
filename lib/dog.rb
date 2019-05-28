@@ -85,7 +85,15 @@ binding.pry
   else
     dog
   end
+  end
 
+  def self.new_from_db(row)
+      hash = {
+        id = row[0]
+        name = row[1]
+        breed = row[2]
+      }
+      Dog.new(hash)
   end
 
 def self.find_by_name(name)
@@ -98,8 +106,9 @@ def self.find_by_name(name)
     SQL
 
     DB[:conn].execute(sql, name).map do |row|
+      
       id = row[0]
-      id
+      
     end.first
   end
 
