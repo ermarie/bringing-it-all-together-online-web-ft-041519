@@ -76,18 +76,15 @@ class Dog
     dog = self.find_by_name(name)
 
     if dog == nil
-
-    hash = {
-        :name => name,
-        :breed => breed
-      }
-      binding.pry
-    new_dog = self.create(hash)
-    new_dog
-  else
-    binding.pry
-    dog
-  end
+      hash = {
+          :name => name,
+          :breed => breed
+        }
+      new_dog = self.create(hash)
+      new_dog
+    else
+      dog
+    end
   end
 
   def self.new_from_db(row)
