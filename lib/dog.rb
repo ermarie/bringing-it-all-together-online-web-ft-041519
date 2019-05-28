@@ -114,10 +114,9 @@ def self.find_by_name(name)
   def update
     binding.pry
     if self.id == nil
-      binding.pry
       self.save
-    else
       binding.pry
+    else
      sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
      DB[:conn].execute(sql, self.name, self.breed, self.id)
    end
