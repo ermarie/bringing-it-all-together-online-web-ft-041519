@@ -86,14 +86,6 @@ binding.pry
 
   end
 
-  def self.new_from_db(row)
-  name =  row[1]
-  breed = row[2]
-  dog = self.new(name, breed)  # self.new is the same as running student.new
-  dog.id = row[0]
-  dog  # return the newly created instance
-end
-
 def self.find_by_name_and_breed(name, breed)
     # find the student in the database given a name
     # return a new instance of the Student class
@@ -105,7 +97,8 @@ def self.find_by_name_and_breed(name, breed)
     SQL
 
     DB[:conn].execute(sql, name, breed).map do |row|
-      self.new_from_db(row)
+      id = row[0]
+      id
     end.first
   end
 
