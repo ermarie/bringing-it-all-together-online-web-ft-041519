@@ -40,6 +40,9 @@ class Dog
     SQL
 
     DB[:conn].execute(sql, self.name, self.breed)
+    if dog.id == nil
+      dog.id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
+    end
     self
   end
 
