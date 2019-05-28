@@ -73,7 +73,7 @@ class Dog
 
   def self.find_or_create_by(name:, breed:)
 
-    dog = self.find_by(name, breed)
+    dog = self.find_by_name(name)
 binding.pry
     if dog == nil
     hash = {
