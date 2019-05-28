@@ -72,7 +72,7 @@ class Dog
   def self.find_or_create_by(name:, breed:)
 
     dog = self.find_by(name, breed)
-
+binding.pry
     if dog == nil
     hash = {
         :name => name,
