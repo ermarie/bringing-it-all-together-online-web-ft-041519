@@ -70,7 +70,7 @@ class Dog
   end
 
   def self.find_or_create_by(name:, breed:)
-
+binding.pry
     dog = self.find_by_name(name)
 
     if dog == nil
