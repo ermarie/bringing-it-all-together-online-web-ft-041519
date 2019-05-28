@@ -100,7 +100,7 @@ def self.find_by_name_and_breed(name, breed)
     sql = <<-SQL
       SELECT *
       FROM dogs
-      WHERE name = ?, brred = ?
+      WHERE name = ?, breed = ?
       LIMIT 1
     SQL
 
