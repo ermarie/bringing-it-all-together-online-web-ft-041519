@@ -107,9 +107,7 @@ def self.find_by_name(name)
     SQL
 
     DB[:conn].execute(sql, name).map do |row|
-
-      id = row[0]
-
+      self.new_from_db(row)
     end.first
   end
 
